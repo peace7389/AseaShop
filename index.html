@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Demo Shop</title>
+  <!-- INSERT YOUR GTM SNIPPET BELOW -->
+</head>
+<body>
+  <h1>Welcome to My Demo Shop</h1>
+  <button id="buyButton">Buy Now</button>
+
+  <script>
+    document.getElementById('buyButton').addEventListener('click', function() {
+      console.log("Buy button clicked");
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'purchase',
+        value: 99.99,
+        product: 'Blue T-Shirt'
+      });
+    });
+  </script>
+</body>
+</html>
